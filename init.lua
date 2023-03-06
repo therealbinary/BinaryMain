@@ -10,6 +10,7 @@ if SupportedGames[PlaceId] then
     if ScriptState[PlaceId] then
        if ScriptState[PlaceId].ScriptDown == true then binary.Notify("binary | error", "script is down, wait for developer to restore its functionality", 4); end;
        local scs, err = pcall(function()
+          local vu = game:GetService("VirtualUser")game:GetService("Players").LocalPlayer.Idled:connect(function()   vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)   wait(1)   vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)end)
           loadstring(game:HttpGet("https://raw.githubusercontent.com/therealbinary/BinaryGames/main/"..PlaceId..".lua", true))()
        end)
        if scs then binary.Notify("binary | success", "script is being loaded, hang on, this shouldn't take more than 3 seconds", 4) elseif err then binary.Notify("binary | error", "script caught an error, report this issue and wait for developer to update the script", 4);end;
