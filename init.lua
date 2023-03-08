@@ -3,7 +3,8 @@ getgenv().binary = loadstring(game:HttpGet("https://raw.githubusercontent.com/th
 local Lists = loadstring(game:HttpGet("https://raw.githubusercontent.com/therealbinary/BinaryBackend/main/WBList.lua", true))()
 if (Lists.Blacklist[game.Players.LocalPlayer.UserId]) then binary.Notify("binary | information", "user has been blacklisted from binary by its developer", 10); return; end;
 local SupportedGames = {
-    [8540346411] = "Rebirth Champions X";
+    [8540346411] = "Rebirth Champions X",
+    [12192552089] = "Fruit Warriors",
 }
 if SupportedGames[PlaceId] then 
     local ScriptState = loadstring(game:HttpGet("https://raw.githubusercontent.com/therealbinary/BinaryBackend/main/Status.lua", true))()
