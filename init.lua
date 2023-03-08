@@ -1,5 +1,5 @@
 local PlaceId = game.PlaceId;
-local f = loadstring(game:HttpGet("https://raw.githubusercontent.com/therealbinary/BinaryBackend/main/Functions.lua", true))()
+getgenv().f = loadstring(game:HttpGet("https://raw.githubusercontent.com/therealbinary/BinaryBackend/main/Functions.lua", true))()
 local Lists = loadstring(game:HttpGet("https://raw.githubusercontent.com/therealbinary/BinaryBackend/main/WBList.lua", true))()
 if (Lists.Blacklist[game.Players.LocalPlayer.UserId]) then binary.Notify("binary | information", "user has been blacklisted from binary by its developer", 10); return; end;
 local ScriptState = loadstring(game:HttpGet("https://raw.githubusercontent.com/therealbinary/BinaryBackend/main/Status.lua", true))()
